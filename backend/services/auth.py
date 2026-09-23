@@ -4,7 +4,9 @@ from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
 
-import os`nSECRET_KEY = os.getenv("SECRET_KEY", "dummy_secret_for_demo")
+import os
+
+SECRET_KEY = os.getenv("SECRET_KEY", "dummy_secret_for_demo")
 ALGORITHM = "HS256"
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/token")
